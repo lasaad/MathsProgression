@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using log4net;
 
 namespace MathsProgression.Services
 {
@@ -19,7 +20,7 @@ namespace MathsProgression.Services
 
         [WebMethod]
         public string XmlToJson(string s)
-        { 
+        {
             return Convert.XmlToJson(s);
         }
     }

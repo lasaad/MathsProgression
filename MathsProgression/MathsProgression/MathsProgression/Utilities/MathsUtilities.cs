@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,6 +8,7 @@ namespace MathsProgression.Utilities
 {
     public class MathsUtilities
     {
+        private static readonly ILog Log = LogManager.GetLogger("[Logger Class : MathsUtilities]");
         /// <summary>
         /// This method return <number>th rank of Fibonacci numbers
         /// This is a recursive method, please modify only last parameter
@@ -19,10 +21,19 @@ namespace MathsProgression.Utilities
         /// <returns></returns>
         public static int Fibonacci(int a, int b, int counter, int number)
         {
-            if (counter < number + 1)
-                return Fibonacci(b, a + b, counter + 1, number);
-            else
-                return a;
+            try
+            {
+                if (counter < number + 1)
+                    return Fibonacci(b, a + b, counter + 1, number);
+                else
+                    return a;
+            }
+            catch (Exception ex)
+            {
+                Log.Error("An error happened : " + ex.Message);
+                throw;
+            }
+           
         }
     }
 }

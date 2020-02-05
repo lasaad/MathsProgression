@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 using System.Xml;
+using log4net;
+using log4net.Config;
 using Newtonsoft.Json;
 
 namespace MathsProgression
@@ -14,6 +16,9 @@ namespace MathsProgression
     /// 
     public static class Convert
     {
+
+        private static readonly ILog Log = LogManager.GetLogger("[Logger Class : Convert]");
+
         /// <summary>
         ///Convert XML string to Json string
         /// </summary>
@@ -29,15 +34,16 @@ namespace MathsProgression
                 doc.LoadXml(xml);
                 jsonFormat = JsonConvert.SerializeXmlNode(doc);
             }
-            catch (Exception ex)
+            catch (XmlException ex)
             {
+                Log.Error("An error happened : " + ex.Message);
                 jsonFormat = "Bad Xml format";
             }
+            catch (Exception ex)
+            {
+                Log.Error("An error happened : " + ex.Message);
+            }
             return jsonFormat;
-
-
-
-
         }
     }
 }
