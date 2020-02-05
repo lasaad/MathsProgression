@@ -24,10 +24,20 @@ namespace MathsProgression
             XmlDocument doc = new XmlDocument();
             string jsonFormat = "";
 
-            doc.LoadXml(xml);
-            jsonFormat = JsonConvert.SerializeXmlNode(doc);
-
+            try
+            {
+                doc.LoadXml(xml);
+                jsonFormat = JsonConvert.SerializeXmlNode(doc);
+            }
+            catch (Exception ex)
+            {
+                jsonFormat = "Bad Xml format";
+            }
             return jsonFormat;
+
+
+
+
         }
     }
 }
