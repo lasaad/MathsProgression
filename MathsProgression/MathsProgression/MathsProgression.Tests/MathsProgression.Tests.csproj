@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E9FEF0E8-CAE8-4E2E-971A-1EC60642EEFB}</ProjectGuid>
+    <ProjectGuid>{4F540797-7E46-4911-96BC-A8F020C8A683}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MathsProgression.Tests</RootNamespace>
@@ -63,11 +63,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MathsProgression\MathsProgression.csproj">
-      <Project>{63734D4F-7ECB-4685-B4FF-86946A9ED74F}</Project>
+      <Project>{7127813C-88F3-4F82-88DA-84EFE3D26E37}</Project>
       <Name>MathsProgression</Name>
     </ProjectReference>
   </ItemGroup>
