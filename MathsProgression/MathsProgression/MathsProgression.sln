@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsProgression", "MathsPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsProgression.Tests", "MathsProgression.Tests\MathsProgression.Tests.csproj", "{4F540797-7E46-4911-96BC-A8F020C8A683}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceConsumer", "WebServiceConsumer\WebServiceConsumer.csproj", "{8BB94FE5-AA3D-433E-BC5C-E1B3ED2D865E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4F540797-7E46-4911-96BC-A8F020C8A683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F540797-7E46-4911-96BC-A8F020C8A683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F540797-7E46-4911-96BC-A8F020C8A683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB94FE5-AA3D-433E-BC5C-E1B3ED2D865E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB94FE5-AA3D-433E-BC5C-E1B3ED2D865E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB94FE5-AA3D-433E-BC5C-E1B3ED2D865E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB94FE5-AA3D-433E-BC5C-E1B3ED2D865E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
