@@ -12,7 +12,9 @@ namespace WebServiceConsumer
     {
         HttpWebRequest CreateWebRequest(string url);
 
-        string CallWebService();
+        string CallWebService(string data);
+
     }
+
 }
 

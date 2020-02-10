@@ -23,6 +23,9 @@ namespace MathsProgression.Utilities
         {
             try
             {
+                //Result is to high for int type
+                if (number > 45)
+                    return -1;
                 if (counter < number + 1)
                     return Fibonacci(b, a + b, counter + 1, number);
                 else
