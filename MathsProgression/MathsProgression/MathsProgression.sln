@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsProgression.Tests", "MathsProgression.Tests\MathsProgression.Tests.csproj", "{4F540797-7E46-4911-96BC-A8F020C8A683}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceConsumer", "WebServiceConsumer\WebServiceConsumer.csproj", "{8BB94FE5-AA3D-433E-BC5C-E1B3ED2D865E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7127813C-88F3-4F82-88DA-84EFE3D26E37} = {7127813C-88F3-4F82-88DA-84EFE3D26E37}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

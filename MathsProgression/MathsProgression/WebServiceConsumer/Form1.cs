@@ -7,22 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using log4net;
+using MathsProgression.Services;
+using Newtonsoft.Json.Linq;
 
 namespace WebServiceConsumer
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        private static string _url = "https://localhost:44342/Services/MathsProgressionService.asmx";
+        private static readonly ILog Log = LogManager.GetLogger("[Logger Class : MainForm]");
+
+        public MainForm()
         {
             InitializeComponent();
         }
 
         private void Compute_Click(object sender, EventArgs e)
         {
-            MathsProgressionConnect m = new MathsProgressionConnect();
-            m.CreateWebRequest("","");
-            m.CallWebService();
+            string resultXML = "",
+                   resultString = "";
+            JObject json = null;
 
+            try
+            {
+                var connexion = SOAPConnect.Instance(_url);
+
+                resultXML = connexion.CallWebService();
+       
+                json = JObject.Parse(MathsProgression.Convert.XmlToJson(resultXML));
+                resultString = json["soap:Envelope"]["soap:Body"]["FibonacciResponse"]["FibonacciResult"].ToString();
+                ResultOutput.Text = resultString;
+            }
+            catch (Exception ex)
+            {
+                Log.Error("An error happened : " + ex.Message);
+            }
         }
     }
 }

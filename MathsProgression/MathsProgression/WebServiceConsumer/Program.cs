@@ -16,7 +16,18 @@ namespace WebServiceConsumer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            var form1 = new MainForm();
+            form1.FormBorderStyle = FormBorderStyle.FixedDialog;
+
+            // Set the MaximizeBox to false to remove the maximize box.
+            form1.MaximizeBox = false;
+
+            // Set the start position of the form to the center of the screen.
+            form1.StartPosition = FormStartPosition.CenterScreen;
+
+            // Display the form as a modal dialog box.
+            Application.Run(form1);
+           
         }
     }
 }

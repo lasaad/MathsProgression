@@ -17,7 +17,6 @@ namespace MathsProgression.Services
     // [System.Web.Script.Services.ScriptService]
     public class convertService : WebService
     {
-
         [WebMethod]
         public string XmlToJson(string s)
         {

@@ -10,8 +10,9 @@ namespace WebServiceConsumer
 {
     interface IConnection
     {
-        HttpWebRequest CreateWebRequest(string url, string action);
+        HttpWebRequest CreateWebRequest(string url);
 
         string CallWebService();
     }
 }
+
